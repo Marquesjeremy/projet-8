@@ -1,0 +1,91 @@
+// Banner About
+
+.banner-about {
+    max-width: 1240px;
+    height: 223px;
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: url("../../assets/banner-about.png");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    filter: brightness(0.7);
+    @media (min-width: $phoneScreenSize) {
+        background: url("../../assets/banner-about.png");
+        border-radius: 25px;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+// Collapse About
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 148px;
+    @media (min-width: $phoneScreenSize) {
+        margin-top: 31px;
+        margin-bottom: 170px;
+    }
+}
+
+.collapse-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 10px 0;
+}
+
+.toggle-btn {
+    border: none;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colour-primary;
+    color: $colour-secondary;
+    border-radius: 5px;
+    cursor: pointer;
+
+    & p {
+        font-size: 18px;
+    }
+    
+    @media (min-width: $phoneScreenSize) {
+        height: 17px;
+        width: 100%;
+        font-size: 24px;
+        padding: 20px 20px 20px 20px;
+    }
+}
+
+.collapse-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-size: 12px;
+    font-weight: 400;
+    color: $colour-primary;
+    background-color: $colour-tertiary;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    
+    @media (min-width: $phoneScreenSize) {
+        font-size: 24px;
+    
+    }
+}
+
+.collapsed {
+    max-height: 0;
+}
+
+.content-inner {
+    padding: 17px 10px 30px 10px;
+    font-size: 18px;
+}

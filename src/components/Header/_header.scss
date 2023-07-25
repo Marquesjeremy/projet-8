@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    @media (min-width: $phoneScreenSize) {
+        margin-top: 40px;
+    }
+    & a img{
+        width: 145px;
+        @media (min-width: $phoneScreenSize) {
+            width: 210px;
+        }
+    }
+    & nav {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        @media (min-width: $phoneScreenSize) {
+            font-size: 24px;
+        } 
+        & a {
+            margin-left: 10px;
+            color: $colour-primary;
+            @media (min-width: $phoneScreenSize) {
+                margin-left: 57px;
+            } 
+        }
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+}

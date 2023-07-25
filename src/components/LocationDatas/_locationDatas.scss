@@ -1,0 +1,132 @@
+.location-datas-bloc {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    @media (min-width: $phoneScreenSize) {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    & .location-datas-general {
+        @media (min-width: $phoneScreenSize) {
+            display: flex; 
+            justify-content: space-between;;
+        }
+        & .location-datas-info {
+            color: $colour-primary;            
+            & h1 {
+                font-size: 18px;    
+                margin-bottom: 15px;    
+                @media (min-width: $phoneScreenSize) {
+                    font-size: 36px;   
+                    max-width: 80%;
+                }        
+            }
+            & h2 {
+                font-size: 14px;
+                @media (min-width: $phoneScreenSize) {
+                    font-size: 18px;   
+                }
+            }
+            & .datas-info-tags {
+                color: $colour-secondary;
+                display: flex;
+                gap: 10px;
+                margin: 10px 0;
+                align-items: center;
+                @media (min-width: $phoneScreenSize) {
+                    margin: 20px 0; 
+                }
+                & li {
+                    width: 84px;
+                    text-align: center;
+                    font-size: 10px;
+                    padding: 0.4rem 0;
+                    background-color: $colour-primary;
+                    border-radius: 10px;
+                    @media (min-width: $phoneScreenSize) {
+                        width: 115px; 
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        & .datas-profil {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            @media (min-width: $phoneScreenSize) {
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 24px;
+            }
+            & .datas-profil-profil {
+                display: flex;
+                align-items: center;
+                & h3 {
+                    font-size: 12px;
+                    width: 93px;
+                    text-align: end;
+                    margin-right: 10.5px;
+                    color: $colour-primary;
+                    @media (min-width: $phoneScreenSize) {
+                        font-size: 18px;   
+                    }
+                }
+                & img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    @media (min-width: $phoneScreenSize) {
+                        width: 64px;
+                        height: 64px;     
+                    }
+                }
+            }
+            &.datas-profil-rate {
+                @media (min-width: $phoneScreenSize) {
+                    
+                }
+            }
+            & .starsRed {
+                width: 18px;
+                height: 18px;
+                color: #ff6060;
+                padding-left: 6px;
+                @media (min-width: $phoneScreenSize) {
+                    width: 24px;
+                    height: 24px;
+                    padding-left: 8px;
+                }
+            }
+            & .starsGrey {
+                width: 18px;
+                height: 18px;
+                color: #E3E3E3;
+                padding-left: 8px;
+                @media (min-width: $phoneScreenSize) {
+                    width: 24px;
+                    height: 24px;
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+    & .location-datas-detail {
+        width: 100%;
+        max-width: 1240px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $phoneScreenSize) {
+            flex-direction: initial;
+            justify-content: center;
+            gap: 10%;
+        }
+        & div {
+            @media (min-width: $phoneScreenSize) {
+                width: 100%;
+                max-width: 582px;
+            }
+        }
+    }
+}

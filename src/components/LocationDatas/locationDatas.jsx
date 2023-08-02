@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import locationsDatas from '../../datas/locationsList.json';
 import Tags from "./Tags";
 import Rate from "./Modale";
 import Collapse from "../Collapse/CollapseActiveChevron";
 
 
-function LocationDatas({ title, description }) {
+function LocationDatas({data}) {
 
     // On récupère l'ID avec useParams
     const { id } = useParams();
@@ -18,18 +17,17 @@ function LocationDatas({ title, description }) {
         equipments: [],
         tags: []
     });
-
+    
     const navigate = useNavigate();
 
     // On utilise useEffect pour remplir le tableau et on en profite pour comparer l'ID de l'URL et celui existant dans le fichier JSON
     useEffect(() => {
-        let foundLocation = locationsDatas.find((data) => data.id === id);
+        let foundLocation = data.find((data) => data.id === id);
+        console.log(data);
         if (foundLocation) {
             setLocation(foundLocation);
-        } else {
-            navigate("/Error");
         }
-    }, [id, navigate]);
+    }, [data, id, navigate]);
 
     // On initialise une variable, elle retournera la liste d'équipements avec .map
     let locationEquipment = location.equipments.map((i, index) => (

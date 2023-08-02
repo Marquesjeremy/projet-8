@@ -8,7 +8,7 @@ const Collapse = ({ text, title }) => {
     const [contentHeight, setContentHeight] = useState(0);
 
     useEffect(() => {
-        setContentHeight("200px");
+        setContentHeight("500px");
         setChevronRotation(isCollapsed ? 0 : -180);
     }, [isCollapsed]);
 
@@ -40,4 +40,3 @@ const Collapse = ({ text, title }) => {
 };
 
 export default Collapse;
-

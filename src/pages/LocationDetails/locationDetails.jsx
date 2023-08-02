@@ -1,11 +1,11 @@
 import Slideshow from "../../components/Slideshow/slide"
 import LocationDatas from "../../components/LocationDatas/locationDatas";
 
-function LocationDetails() {
+function LocationDetails({data}) {
     return (
         <main>
-            <Slideshow />
-            <LocationDatas />
+            <Slideshow data={data}/>
+            <LocationDatas data={data} />
         </main>
     )
 }

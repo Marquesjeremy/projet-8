@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import locationsDatas from '../../datas/locationsList.json';
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-function Slideshow() {
+function Slideshow({data}) {
     const { id } = useParams();
     // On initialise le tableau avec useState
     const [location, setLocation] = useState({
@@ -12,7 +11,7 @@ function Slideshow() {
 
     // On récupère les images avec .map et on les mets  dans le tableau avec useEffect
     useEffect(() => {
-        locationsDatas.map((data) => {
+        data.map((data) => {
             if (data.id === id) { // On oublie pas de vérifier l'ID en URL avec celle du fichier JSON
                 setLocation(data);
             }

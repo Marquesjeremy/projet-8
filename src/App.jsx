@@ -12,7 +12,7 @@ const App = () => {
     useEffect(() => {
         const getData = async() => {
             try {
-                const requet = await fetch("./locationsList.json",{method: "GET"});
+                const requet = await fetch(`${process.env.PUBLIC_URL}/locationsList.json`,{method: "GET"});
                 if(requet.ok){
                     const data = await requet.json();
                     console.log(data);
